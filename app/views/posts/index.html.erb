@@ -1,23 +1,13 @@
-<header>
-  <div class="header-logo">
-    <a href="/">TweetApp</a>
-  </div>
-  <ul class="header-menus">
-    <li>
-      <a href="/about">TweetAppとは</a>
-    </li>
-  </ul>
-</header>
+<!-- ヘッダー部分をapplication.html.erbに移動して、このファイルからは削除してください -->
+<!-- ヘッダー部分始まり -->
 
-<!-- 以下のコードを削除してください -->
-<!-- ここまで削除 -->
+<!-- ヘッダー部分終わり -->
 
 <div class="main posts-index">
   <div class="container">
-    <!-- 変数postsを@postsに書き換えてください -->
     <% @posts.each do |post| %>
       <div class="posts-index-item">
-        <%= post %>
+        <%= post.content %>
       </div>
     <% end %>
   </div>
