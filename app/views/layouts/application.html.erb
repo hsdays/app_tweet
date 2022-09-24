@@ -1,4 +1,3 @@
-<!-- どのページでも表示したいHTMLはapplication.html.erbに書いておく -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,19 +9,23 @@
   </head>
 
   <body>
-    <!-- ここにヘッダーを書いてください -->
     <header>
       <div class="header-logo">
-        <a href="/">TweetApp</a>
+        <%= link_to("TweetApp", "/") %>
       </div>
       <ul class="header-menus">
         <li>
-          <a href="/about">TweetAppとは</a>
+          <%= link_to("TweetAppとは", "/about") %>
+        </li>
+        <li>
+          <%= link_to("投稿一覧", "/posts/index") %>
+        </li>
+        <li>
+          <!-- ここに新規投稿ページへのリンクを追加してください -->
+          <%= link_to("新規投稿", "/posts/new") %>
         </li>
       </ul>
     </header>
-
-    <!-- 各ビューファイルは以下のyieldに代入され、application.html.erbの一部となる -->
     <%= yield %>
   </body>
 </html>
