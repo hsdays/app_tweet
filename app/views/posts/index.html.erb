@@ -1,13 +1,8 @@
-<!-- ヘッダー部分をapplication.html.erbに移動して、このファイルからは削除してください -->
-<!-- ヘッダー部分始まり -->
-
-<!-- ヘッダー部分終わり -->
-
 <div class="main posts-index">
   <div class="container">
     <% @posts.each do |post| %>
       <div class="posts-index-item">
-        <%= post.content %>
+        <%= link_to(post.content, "/posts/#{post.id}") %>
       </div>
     <% end %>
   </div>
